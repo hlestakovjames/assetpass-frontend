@@ -162,7 +162,7 @@ export default function Home() {
               Scan QR
             </Link>
             <a
-              href="https://app.assetpass.com"
+              href="https://assetpass-app.vercel.app"
               className="button button-primary button-small"
             >
               Staff login <ArrowIcon />
@@ -419,7 +419,7 @@ export default function Home() {
             <a href="#platform">Platform</a>
             <a href="#how-it-works">How it works</a>
             <Link href="/scan">Scan QR</Link>
-            <a href="https://app.assetpass.com">Staff login</a>
+            <a href="https://assetpass-app.vercel.app">Staff login</a>
           </div>
         </div>
         <div className="container footer-bottom">
