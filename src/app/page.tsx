@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const features = [
   {
@@ -161,11 +161,19 @@ export default function Home() {
             <Link href="/scan" className="nav-scan">
               Scan QR
             </Link>
+
+            <a
+              href="https://assetpass-app.vercel.app/register"
+              className="button button-primary button-small"
+            >
+              Register
+            </a>
+
             <a
               href="https://assetpass-app.vercel.app"
               className="button button-primary button-small"
             >
-              Staff login <ArrowIcon />
+              Login <ArrowIcon />
             </a>
           </div>
         </div>
@@ -197,7 +205,9 @@ export default function Home() {
                 Explore the platform <ArrowIcon />
               </a>
               <Link href="/scan" className="button button-outline">
-                <span className="button-qr" aria-hidden="true">▦</span>
+                <span className="button-qr" aria-hidden="true">
+                  ▦
+                </span>
                 Scan an asset
               </Link>
             </div>
@@ -208,7 +218,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Illustration of a digital asset passport">
+          <div
+            className="hero-visual"
+            aria-label="Illustration of a digital asset passport"
+          >
             <div className="visual-orbit orbit-one" />
             <div className="visual-orbit orbit-two" />
 
@@ -216,7 +229,9 @@ export default function Home() {
               <div className="asset-card-top">
                 <div className="asset-card-brand">
                   <BrandMark />
-                  <span>ASSET<span className="teal-text">PASS</span></span>
+                  <span>
+                    ASSET<span className="teal-text">PASS</span>
+                  </span>
                 </div>
                 <span className="record-label">DIGITAL RECORD</span>
               </div>
@@ -392,7 +407,10 @@ export default function Home() {
               </span>
               <ArrowIcon />
             </Link>
-            <a href="https://assetpass-app.vercel.app" className="access-option">
+            <a
+              href="https://assetpass-app.vercel.app"
+              className="access-option"
+            >
               <span className="access-option-icon access-option-dark">↗</span>
               <span className="access-option-copy">
                 <strong>Staff application</strong>
@@ -430,4 +448,3 @@ export default function Home() {
     </main>
   );
 }
-
