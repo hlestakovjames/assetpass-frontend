@@ -392,7 +392,7 @@ export default function Home() {
               </span>
               <ArrowIcon />
             </Link>
-            <a href="https://app.assetpass.com" className="access-option">
+            <a href="https://assetpass-app.vercel.app" className="access-option">
               <span className="access-option-icon access-option-dark">↗</span>
               <span className="access-option-copy">
                 <strong>Staff application</strong>
