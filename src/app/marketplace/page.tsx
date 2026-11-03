@@ -18,7 +18,7 @@ export default function MarketplacePage() {
   return <PublicPage
     eyebrow="THE ASSETPASS MARKETPLACE"
     title="A smarter way to discover and connect around assets."
-    description="Explore asset opportunities, connect with organizations and make more informed decisions through a marketplace experience connected to the wider AssetPass ecosystem."
+    description="Discover assets listed by organizations and sellers, compare opportunities and explore what is available. The public marketplace is designed to be browsed without an AssetPass account—sign-in should only be requested when you choose an action that requires an account."
   >
     <section className="marketplace-intro">
       <div className="marketplace-intro-copy">
@@ -26,8 +26,8 @@ export default function MarketplacePage() {
         <h2>More than a listing directory.</h2>
         <p>AssetPass Marketplace is designed to bring asset owners, organizations and interested buyers into one structured discovery environment. Find relevant opportunities, review the information provided and take the next step with greater clarity.</p>
         <div className="marketplace-actions">
-          <a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Join AssetPass <span aria-hidden="true">→</span></a>
-          <a href="https://assetpass-app.vercel.app" className="marketplace-text-link">Already have an account? Login</a>
+          <a href="#public-listings" className="home-primary-button">Explore public listings <span aria-hidden="true">↓</span></a>
+          <a href="https://assetpass-app.vercel.app/register" className="marketplace-text-link">List or manage assets with AssetPass</a>
         </div>
       </div>
       <div className="marketplace-visual" aria-label="Illustrative marketplace listing preview">
@@ -46,8 +46,14 @@ export default function MarketplacePage() {
       <div className="marketplace-category-grid">{categories.map(item => <article className="marketplace-category" key={item.title}><span className="marketplace-category-icon">{item.icon}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div><span className="marketplace-category-arrow">↗</span></article>)}</div>
     </ContentSection>
 
-    <ContentSection title="A closer look at marketplace opportunities">
-      <p className="marketplace-section-lead">Examples of the kinds of listings the marketplace experience may support. These are illustrative examples, not live listings or current offers.</p>
+    <div id="public-listings" className="marketplace-public-discovery">
+      <div className="marketplace-public-heading"><div><span className="marketplace-kicker">PUBLIC DISCOVERY · NO LOGIN REQUIRED</span><h2>Find assets. Explore opportunities.</h2><p>Visitors should be able to search, browse categories and open public listing pages before deciding whether to join AssetPass.</p></div><span className="marketplace-open-label">OPEN TO EVERYONE</span></div>
+      <div className="marketplace-public-search" aria-label="Illustrative public marketplace search"><span aria-hidden="true">⌕</span><span>Search by asset name, category or keyword</span><span className="marketplace-filter-label">Filter by category</span></div>
+      <p className="marketplace-live-note">Public listing search and live inventory will be connected when the marketplace listing service is integrated. The examples below demonstrate the intended discovery experience; they are not live offers.</p>
+    </div>
+
+    <ContentSection title="Examples of assets visitors could discover">
+      <p className="marketplace-section-lead">These sample cards illustrate how publicly visible listings can advertise available assets. Actual listings will display only information approved for public viewing.</p>
       <div className="marketplace-listing-grid">{listings.map(item => <article className="marketplace-listing" key={item.name}><div className="marketplace-listing-art"><span>{item.tag === "Technology" ? "▰" : item.tag === "Furniture" ? "▤" : "⚙"}</span><small>EXAMPLE LISTING</small></div><div className="marketplace-listing-body"><small>{item.category}</small><h3>{item.name}</h3><p>{item.detail}</p><div className="marketplace-listing-bottom"><strong>{item.price}</strong><span>Illustrative</span></div></div></article>)}</div>
     </ContentSection>
 
@@ -74,6 +80,6 @@ export default function MarketplacePage() {
     </ContentSection>
 
     <section className="marketplace-final-cta"><span className="marketplace-kicker">BE PART OF THE ASSETPASS ECOSYSTEM</span><h2>Discover what's possible with connected assets.</h2><p>Create an account to get started with the AssetPass ecosystem.</p><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started with AssetPass <span aria-hidden="true">→</span></a></section>
-    <p className="marketplace-release-note">Marketplace features are introduced in line with the capabilities actually released in the application. Live inventory, transaction execution, payment processing and escrow are not represented as available services on this page.</p>
+    <p className="marketplace-release-note">Public browsing is the intended marketplace experience and should not require login. Live listing search, listing detail pages and seller publishing depend on the marketplace backend and are not yet connected on this public website. Transaction execution, payment processing and escrow are not represented as available services.</p>
   </PublicPage>;
 }
