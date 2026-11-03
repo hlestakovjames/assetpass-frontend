@@ -55,10 +55,10 @@ export default function Home() {
             <span>Asset<span>Pass</span></span>
           </Link>
           <nav className="home-nav-links" aria-label="Main navigation">
-            <a href="#platform">Platform</a>
-            <a href="#marketplace">Marketplace</a>
-            <a href="#organizations">Organizations</a>
-            <a href="#how-it-works">How it works</a>
+            <Link href="/platform">Platform</Link>
+            <Link href="/marketplace">Marketplace</Link>
+            <Link href="/organizations">Organizations</Link>
+            <Link href="/how-it-works">How it works</Link>
           </nav>
           <div className="home-nav-actions">
             <Link href="/scan" className="home-scan-link">Scan QR</Link>
@@ -76,7 +76,7 @@ export default function Home() {
             <h1>Manage what you own.<br /><em>Connect what you need.</em></h1>
             <p>AssetPass brings structured asset lifecycle management and a connected marketplace into one platform — helping organizations maintain control of their assets and discover new opportunities.</p>
             <div className="home-hero-actions">
-              <a href="#platform" className="home-primary-button">Explore AssetPass <ArrowIcon /></a>
+              <Link href="/platform" className="home-primary-button">Explore AssetPass <ArrowIcon /></Link>
               <Link href="/scan" className="home-secondary-button"><span>▦</span> Scan an asset</Link>
             </div>
             <div className="home-hero-assurance"><span>✓</span> Built around accountability, visibility and trusted connections</div>
@@ -111,14 +111,14 @@ export default function Home() {
               <h3>AssetPass Core</h3><p className="home-pillar-lead">Know your assets. Manage every transition.</p>
               <p>Establish a reliable view of organizational assets, their condition, custody and lifecycle history — supported by structured workflows and controlled access.</p>
               <ul><li>Asset registration and digital passports</li><li>Custody and responsibility tracking</li><li>Inspections, maintenance and lifecycle records</li><li>Visibility, governance and auditability</li></ul>
-              <a href="#core-capabilities" className="home-pillar-link">Explore asset management <ArrowIcon /></a>
+              <Link href="/platform" className="home-pillar-link">Explore asset management <ArrowIcon /></Link>
             </article>
             <article className="home-pillar-card home-market-card" id="marketplace">
               <div className="home-pillar-index">02 / CONNECTED MARKETPLACE</div><div className="home-market-visual"><div className="home-market-orbit" /><div className="home-market-tile"><span>AP</span><b>ASSET</b><small>DISCOVERY</small></div><div className="home-market-node node-a">↗</div><div className="home-market-node node-b">⌕</div><div className="home-market-node node-c">◇</div></div>
               <h3>AssetPass Marketplace</h3><p className="home-pillar-lead">Discover assets. Create connections.</p>
               <p>A dedicated marketplace experience designed to connect organizations and people with asset-related opportunities through a more structured digital environment.</p>
               <ul><li>Discover listed assets and opportunities</li><li>Connect interested parties</li><li>Explore asset availability and details</li><li>Keep marketplace activity distinct from custody records</li></ul>
-              <a href="https://assetpass-app.vercel.app" className="home-pillar-link">Explore the platform <ArrowIcon /></a>
+              <Link href="/marketplace" className="home-pillar-link">Explore the marketplace <ArrowIcon /></Link>
             </article>
           </div>
           <p className="home-market-note">Marketplace availability and transaction workflows depend on the capabilities released in the application. A listing by itself does not change asset ownership or custody.</p>
@@ -152,7 +152,7 @@ export default function Home() {
 
       <section className="home-final-cta"><div className="home-container home-cta-layout"><div><small>TAKE THE NEXT STEP</small><h2>Make every asset connection count.</h2><p>Explore AssetPass and see how a connected approach can support better asset management.</p></div><div className="home-cta-actions"><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started <ArrowIcon /></a><Link href="/scan" className="home-secondary-light">Scan an asset</Link></div></div></section>
 
-      <footer className="home-footer"><div className="home-container"><div className="home-footer-main"><div><Link href="/" className="home-brand home-footer-brand"><BrandMark light /><span>Asset<span>Pass</span></span></Link><p>Secure Every Asset. Track Every Transition.</p></div><div className="home-footer-links"><a href="#platform">Platform</a><a href="#marketplace">Marketplace</a><a href="#organizations">Organizations</a><a href="#how-it-works">How it works</a><Link href="/scan">Scan QR</Link><a href="https://assetpass-app.vercel.app">Login</a></div></div><div className="home-footer-bottom"><span>© 2026 AssetPass. All rights reserved.</span><span>Asset lifecycle management · Connected marketplace</span></div></div></footer>
+      <footer className="home-footer"><div className="home-container"><div className="home-footer-main"><div><Link href="/" className="home-brand home-footer-brand"><BrandMark light /><span>Asset<span>Pass</span></span></Link><p>Secure Every Asset. Track Every Transition.</p></div><div className="home-footer-links"><Link href="/platform">Platform</Link><Link href="/marketplace">Marketplace</Link><Link href="/organizations">Organizations</Link><Link href="/how-it-works">How it works</Link><Link href="/scan">Scan QR</Link><a href="https://assetpass-app.vercel.app">Login</a></div></div><div className="home-footer-bottom"><span>© 2026 AssetPass. All rights reserved.</span><span>Asset lifecycle management · Connected marketplace</span></div></div></footer>
     </main>
   );
 }
