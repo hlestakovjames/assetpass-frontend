@@ -2652,3 +2652,15 @@ a:focus-visible {
 @media (min-width:801px) {
   .home-nav-panel { display:flex !important; }
 }
+
+
+/* Keep Login in the mobile header; keep Get started inside the menu */
+.home-mobile-login { display:none; }
+@media (max-width:800px) {
+  .home-mobile-login {
+    display:inline-flex; align-items:center; justify-content:center;
+    min-height:40px; padding:0 8px; color:#29485a;
+    font-size:13px; font-weight:750; white-space:nowrap;
+  }
+  .home-nav-actions .home-login { display:none; }
+}
