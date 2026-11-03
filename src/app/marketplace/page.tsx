@@ -16,6 +16,10 @@ const listings = [
 
 export default function MarketplacePage() {
   return <PublicPage
+    primaryHref="/marketplace#public-listings"
+    primaryLabel="Browse public listings"
+    secondaryHref="https://assetpass-app.vercel.app/register"
+    secondaryLabel="List assets with AssetPass"
     eyebrow="THE ASSETPASS MARKETPLACE"
     title="A smarter way to discover and connect around assets."
     description="Discover assets listed by organizations and sellers, compare opportunities and explore what is available. The public marketplace is designed to be browsed without an AssetPass account—sign-in should only be requested when you choose an action that requires an account."
