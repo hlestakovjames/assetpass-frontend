@@ -2604,3 +2604,18 @@ a:focus-visible {
 .marketplace-release-note { max-width:850px; margin:18px auto 0; color:#83949d; font-size:9px; line-height:1.8; text-align:center; }
 @media(max-width:850px) { .marketplace-intro{grid-template-columns:1fr;gap:28px}.marketplace-listing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.marketplace-journey{grid-template-columns:repeat(2,minmax(0,1fr))}.marketplace-core-bridge{grid-template-columns:1fr}.marketplace-bridge-graphic{padding:10px 0} }
 @media(max-width:540px) { .marketplace-category-grid,.marketplace-listing-grid,.marketplace-journey,.marketplace-trust-grid{grid-template-columns:1fr}.marketplace-core-bridge{padding:23px 18px}.marketplace-intro{padding-top:10px}.marketplace-actions{align-items:flex-start;flex-direction:column}.marketplace-preview-art{height:85px} }
+
+
+/* Public marketplace discovery emphasis */
+.marketplace-public-note { margin:18px 0 0!important; padding:13px 15px; border-left:3px solid #22bfae; border-radius:0 6px 6px 0; background:#eaf8f5; color:#456d73!important; font-size:11px!important; line-height:1.7!important; }
+.marketplace-public-note strong { color:#087f79; }
+.marketplace-public-discovery { margin:38px 0 16px; padding:26px; border:1px solid #dce9e9; border-radius:11px; background:linear-gradient(120deg,#f0f8f7,#fff); scroll-margin-top:100px; }
+.marketplace-public-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; }
+.marketplace-public-heading h2 { margin:9px 0 8px; color:#123047; font-size:clamp(25px,3vw,34px); letter-spacing:-1px; }
+.marketplace-public-heading p { max-width:600px; margin:0; color:#617786; font-size:12px; line-height:1.8; }
+.marketplace-open-label { flex-shrink:0; padding:7px 10px; border:1px solid #bce8df; border-radius:30px; color:#087f79; background:#e7f8f4; font-size:8px; font-weight:900; letter-spacing:.8px; }
+.marketplace-public-search { display:flex; align-items:center; gap:12px; margin-top:20px; padding:13px 15px; border:1px solid #dce7eb; border-radius:7px; background:#fff; color:#91a1aa; font-size:11px; }
+.marketplace-public-search>span:first-child { color:#168f87; font-size:19px; }
+.marketplace-filter-label { margin-left:auto; padding:7px 10px; border-radius:5px; color:#52717c; background:#f1f5f6; font-size:9px; }
+.marketplace-live-note { margin:11px 0 0; color:#82939c!important; font-size:9px!important; line-height:1.7!important; }
+@media(max-width:540px){.marketplace-public-discovery{padding:19px 15px}.marketplace-public-heading{flex-direction:column}.marketplace-open-label{order:-1}.marketplace-public-search{gap:8px;font-size:9px}.marketplace-filter-label{font-size:8px;padding:6px}}
