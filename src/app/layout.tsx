@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "AssetPass | Secure Every Asset",
+    default: "AssetPass | Asset Management & Marketplace",
     template: "%s | AssetPass",
   },
   description:
-    "AssetPass helps organizations identify assets, manage custody, track condition and maintain visibility throughout the asset lifecycle.",
+    "AssetPass connects organizational asset lifecycle management with a dedicated marketplace experience, supporting asset visibility, custody accountability and asset-related discovery.",
   applicationName: "AssetPass",
   keywords: [
     "asset management",
@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     "asset custody",
     "QR asset tracking",
     "digital asset passport",
+    "asset marketplace",
+    "organizational asset management",
   ],
   robots: {
     index: true,
