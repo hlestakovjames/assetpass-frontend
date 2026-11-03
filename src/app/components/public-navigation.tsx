@@ -16,6 +16,7 @@ export function PublicNavigation() {
 
   return (
     <div className="home-nav-menu">
+      <a href="https://assetpass-app.vercel.app" className="home-mobile-login">Login</a>
       <button
         type="button"
         className="home-mobile-menu-toggle"
