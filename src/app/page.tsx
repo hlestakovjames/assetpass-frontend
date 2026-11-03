@@ -59,6 +59,7 @@ export default function Home() {
             <Link href="/marketplace">Marketplace</Link>
             <Link href="/organizations">Organizations</Link>
             <Link href="/how-it-works">How it works</Link>
+            <Link href="/security">Security</Link>
           </nav>
           <div className="home-nav-actions">
             <Link href="/scan" className="home-scan-link">Scan QR</Link>
@@ -152,7 +153,7 @@ export default function Home() {
 
       <section className="home-final-cta"><div className="home-container home-cta-layout"><div><small>TAKE THE NEXT STEP</small><h2>Make every asset connection count.</h2><p>Explore AssetPass and see how a connected approach can support better asset management.</p></div><div className="home-cta-actions"><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started <ArrowIcon /></a><Link href="/scan" className="home-secondary-light">Scan an asset</Link></div></div></section>
 
-      <footer className="home-footer"><div className="home-container"><div className="home-footer-main"><div><Link href="/" className="home-brand home-footer-brand"><BrandMark light /><span>Asset<span>Pass</span></span></Link><p>Secure Every Asset. Track Every Transition.</p></div><div className="home-footer-links"><Link href="/platform">Platform</Link><Link href="/marketplace">Marketplace</Link><Link href="/organizations">Organizations</Link><Link href="/how-it-works">How it works</Link><Link href="/scan">Scan QR</Link><a href="https://assetpass-app.vercel.app">Login</a></div></div><div className="home-footer-bottom"><span>© 2026 AssetPass. All rights reserved.</span><span>Asset lifecycle management · Connected marketplace</span></div></div></footer>
+      <footer className="home-footer"><div className="home-container"><div className="home-footer-main"><div><Link href="/" className="home-brand home-footer-brand"><BrandMark light /><span>Asset<span>Pass</span></span></Link><p>Secure Every Asset. Track Every Transition.</p></div><div className="home-footer-links"><Link href="/platform">Platform</Link><Link href="/marketplace">Marketplace</Link><Link href="/organizations">Organizations</Link><Link href="/how-it-works">How it works</Link><Link href="/security">Security</Link><Link href="/scan">Scan QR</Link><a href="https://assetpass-app.vercel.app">Login</a></div></div><div className="home-footer-bottom"><span>© 2026 AssetPass. All rights reserved.</span><span>Asset lifecycle management · Connected marketplace</span></div></div></footer>
     </main>
   );
 }
