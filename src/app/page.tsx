@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PublicNavigation } from "./components/public-navigation";
 
 const coreCapabilities = [
   { number: "01", title: "Asset lifecycle", copy: "Maintain structured records from registration and assignment through maintenance, retirement and disposal.", icon: "◈" },
@@ -54,18 +55,7 @@ export default function Home() {
             <BrandMark />
             <span>Asset<span>Pass</span></span>
           </Link>
-          <nav className="home-nav-links" aria-label="Main navigation">
-            <Link href="/platform">Platform</Link>
-            <Link href="/marketplace">Marketplace</Link>
-            <Link href="/organizations">Organizations</Link>
-            <Link href="/how-it-works">How it works</Link>
-            <Link href="/security">Security</Link>
-          </nav>
-          <div className="home-nav-actions">
-            <Link href="/scan" className="home-scan-link">Scan QR</Link>
-            <a href="https://assetpass-app.vercel.app" className="home-login">Login</a>
-            <a href="https://assetpass-app.vercel.app/register" className="home-register">Get started <ArrowIcon /></a>
-          </div>
+          <PublicNavigation />
         </div>
       </header>
 
