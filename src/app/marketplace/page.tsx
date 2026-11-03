@@ -1,13 +1,79 @@
+import Link from "next/link";
 import { PublicPage, ContentSection } from "../components/public-page";
 
+const categories = [
+  { icon: "▦", title: "IT & Electronics", detail: "Computers, printers, networking and office technology" },
+  { icon: "⚙", title: "Industrial Equipment", detail: "Tools, machinery and operational equipment" },
+  { icon: "▤", title: "Office & Furniture", detail: "Workstations, seating and office essentials" },
+  { icon: "⌂", title: "Facilities & Property", detail: "Facility-related assets and infrastructure" },
+];
+
+const listings = [
+  { category: "IT & ELECTRONICS", name: "Business-grade laptops", detail: "Refurbished · Multiple units", price: "Enquire for price", tag: "Technology" },
+  { category: "OFFICE EQUIPMENT", name: "Office workstation sets", detail: "Pre-owned · Good condition", price: "Enquire for price", tag: "Furniture" },
+  { category: "INDUSTRIAL", name: "Workshop equipment", detail: "Used · Inspection recommended", price: "Enquire for price", tag: "Equipment" },
+];
+
 export default function MarketplacePage() {
-  return <PublicPage eyebrow="CONNECTED MARKETPLACE" title="Discover assets. Create connections." description="A dedicated marketplace experience designed to connect organizations and people with asset-related opportunities through a more structured digital environment.">
-    <ContentSection title="A connected discovery experience"><p>AssetPass Marketplace extends the asset ecosystem beyond internal management. It is intended to make relevant asset opportunities easier to discover and explore while keeping marketplace activity distinct from an organization's asset custody records.</p><div className="inner-grid">
-      <article className="inner-card"><h3>Discover listings</h3><p>Explore assets and opportunities presented through the marketplace.</p></article>
-      <article className="inner-card"><h3>Connect interested parties</h3><p>Create a structured starting point for conversations around listed assets.</p></article>
-      <article className="inner-card"><h3>Review asset information</h3><p>Understand the information made available for a listing before taking the next step.</p></article>
-      <article className="inner-card"><h3>Keep records distinct</h3><p>A marketplace listing alone does not transfer ownership or change asset custody.</p></article>
-    </div></ContentSection>
-    <ContentSection title="Release 1 availability"><p>Marketplace capabilities will be presented according to what is actually released in the application. Transaction, payment and escrow workflows are not represented here as live services.</p></ContentSection>
+  return <PublicPage
+    eyebrow="THE ASSETPASS MARKETPLACE"
+    title="A smarter way to discover and connect around assets."
+    description="Explore asset opportunities, connect with organizations and make more informed decisions through a marketplace experience connected to the wider AssetPass ecosystem."
+  >
+    <section className="marketplace-intro">
+      <div className="marketplace-intro-copy">
+        <span className="marketplace-kicker">DISCOVER · CONNECT · EXPLORE</span>
+        <h2>More than a listing directory.</h2>
+        <p>AssetPass Marketplace is designed to bring asset owners, organizations and interested buyers into one structured discovery environment. Find relevant opportunities, review the information provided and take the next step with greater clarity.</p>
+        <div className="marketplace-actions">
+          <a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Join AssetPass <span aria-hidden="true">→</span></a>
+          <a href="https://assetpass-app.vercel.app" className="marketplace-text-link">Already have an account? Login</a>
+        </div>
+      </div>
+      <div className="marketplace-visual" aria-label="Illustrative marketplace listing preview">
+        <div className="marketplace-visual-top"><span><i></i> MARKETPLACE PREVIEW</span><span>ILLUSTRATIVE</span></div>
+        <div className="marketplace-searchbar"><span>⌕</span> Search assets and opportunities <b>Filter</b></div>
+        <div className="marketplace-preview-grid">
+          <div className="marketplace-preview-card"><div className="marketplace-preview-art art-laptop"><span>▰</span></div><small>IT & ELECTRONICS</small><strong>Business laptops</strong><em>Enquire for price</em></div>
+          <div className="marketplace-preview-card"><div className="marketplace-preview-art art-furniture"><span>▤</span></div><small>OFFICE EQUIPMENT</small><strong>Workstation sets</strong><em>Enquire for price</em></div>
+        </div>
+        <div className="marketplace-visual-foot"><span>Discover opportunities across categories</span><span>AssetPass Marketplace</span></div>
+      </div>
+    </section>
+
+    <ContentSection title="Explore by category">
+      <p className="marketplace-section-lead">A marketplace structure that can support different kinds of organizational and business assets.</p>
+      <div className="marketplace-category-grid">{categories.map(item => <article className="marketplace-category" key={item.title}><span className="marketplace-category-icon">{item.icon}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div><span className="marketplace-category-arrow">↗</span></article>)}</div>
+    </ContentSection>
+
+    <ContentSection title="A closer look at marketplace opportunities">
+      <p className="marketplace-section-lead">Examples of the kinds of listings the marketplace experience may support. These are illustrative examples, not live listings or current offers.</p>
+      <div className="marketplace-listing-grid">{listings.map(item => <article className="marketplace-listing" key={item.name}><div className="marketplace-listing-art"><span>{item.tag === "Technology" ? "▰" : item.tag === "Furniture" ? "▤" : "⚙"}</span><small>EXAMPLE LISTING</small></div><div className="marketplace-listing-body"><small>{item.category}</small><h3>{item.name}</h3><p>{item.detail}</p><div className="marketplace-listing-bottom"><strong>{item.price}</strong><span>Illustrative</span></div></div></article>)}</div>
+    </ContentSection>
+
+    <ContentSection title="How the marketplace journey works">
+      <div className="marketplace-journey">{[
+        ["01", "Discover", "Browse asset opportunities and explore relevant categories."],
+        ["02", "Evaluate", "Review available descriptions, condition information and listing details."],
+        ["03", "Connect", "Express interest and connect with the listing organization or owner."],
+        ["04", "Proceed responsibly", "Any resulting agreement and formal transaction must follow the applicable verified process."]
+      ].map(([number,title,copy]) => <article className="marketplace-journey-step" key={number}><span>{number}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div>
+    </ContentSection>
+
+    <section className="marketplace-core-bridge">
+      <div><span className="marketplace-kicker">CONNECTED TO ASSETPASS CORE</span><h2>Discovery outside. Accountability inside.</h2><p>The Marketplace complements AssetPass Core. Core supports an organization's asset records and custody lifecycle; the Marketplace provides a separate space to discover and explore opportunities. A listing by itself does not change an asset's ownership, custody or status in an organization's records.</p><Link href="/platform" className="marketplace-bridge-link">Explore AssetPass Core <span aria-hidden="true">→</span></Link></div>
+      <div className="marketplace-bridge-graphic"><div className="bridge-node"><span>▦</span><strong>Marketplace</strong><small>Discover & connect</small></div><div className="bridge-line"><i></i><span>Verified process</span><i></i></div><div className="bridge-node bridge-node-core"><span>◇</span><strong>AssetPass Core</strong><small>Records & custody</small></div></div>
+    </section>
+
+    <ContentSection title="Designed with trust and clarity in mind">
+      <div className="marketplace-trust-grid">
+        <article><span>01</span><h3>Clear listing information</h3><p>Help interested parties understand what is being offered and what details are available.</p></article>
+        <article><span>02</span><h3>Separate asset records</h3><p>Marketplace activity remains distinct from internal custody and lifecycle records.</p></article>
+        <article><span>03</span><h3>Responsible next steps</h3><p>Ownership and custody changes require their own appropriate verification and approval processes.</p></article>
+      </div>
+    </ContentSection>
+
+    <section className="marketplace-final-cta"><span className="marketplace-kicker">BE PART OF THE ASSETPASS ECOSYSTEM</span><h2>Discover what's possible with connected assets.</h2><p>Create an account to get started with the AssetPass ecosystem.</p><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started with AssetPass <span aria-hidden="true">→</span></a></section>
+    <p className="marketplace-release-note">Marketplace features are introduced in line with the capabilities actually released in the application. Live inventory, transaction execution, payment processing and escrow are not represented as available services on this page.</p>
   </PublicPage>;
 }
