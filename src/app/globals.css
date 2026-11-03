@@ -2619,3 +2619,36 @@ a:focus-visible {
 .marketplace-filter-label { margin-left:auto; padding:7px 10px; border-radius:5px; color:#52717c; background:#f1f5f6; font-size:9px; }
 .marketplace-live-note { margin:11px 0 0; color:#82939c!important; font-size:9px!important; line-height:1.7!important; }
 @media(max-width:540px){.marketplace-public-discovery{padding:19px 15px}.marketplace-public-heading{flex-direction:column}.marketplace-open-label{order:-1}.marketplace-public-search{gap:8px;font-size:9px}.marketplace-filter-label{font-size:8px;padding:6px}}
+
+
+/* Responsive public navigation: desktop links become a real mobile menu */
+.home-nav-menu { display:flex; flex:1; min-width:0; align-items:center; }
+.home-nav-panel { display:flex; flex:1; min-width:0; align-items:center; justify-content:space-between; gap:22px; }
+.home-mobile-menu-toggle { display:none; }
+@media (max-width:800px) {
+  .home-header { position:sticky; height:72px; min-height:72px; }
+  .home-nav { position:relative; min-height:72px; height:72px; flex-wrap:nowrap; padding-top:0; padding-bottom:0; }
+  .home-nav-menu { flex:0 0 auto; margin-left:auto; }
+  .home-mobile-menu-toggle {
+    display:flex; width:44px; height:44px; flex-direction:column; align-items:center;
+    justify-content:center; gap:5px; border:1px solid #dce7eb; border-radius:7px;
+    background:#fff; color:#123047; cursor:pointer;
+  }
+  .home-mobile-menu-toggle span { display:block; width:19px; height:2px; border-radius:2px; background:currentColor; }
+  .home-nav-panel {
+    display:none; position:absolute; top:calc(100% + 1px); left:0; right:0; z-index:40;
+    flex-direction:column; align-items:stretch; gap:0; padding:12px 16px 16px;
+    border:1px solid #e3ebef; border-top:0; border-radius:0 0 10px 10px;
+    background:#fff; box-shadow:0 18px 35px rgba(11,34,53,.14);
+  }
+  .home-nav-panel.is-open { display:flex; }
+  .home-nav-links { display:flex; width:100%; flex-direction:column; align-items:stretch; gap:0; order:0; margin:0; padding:0; border:0; }
+  .home-nav-links a { display:block; padding:13px 4px; border-bottom:1px solid #edf1f3; color:#29485a; font-size:14px; }
+  .home-nav-actions { display:flex; width:100%; flex-direction:column; align-items:stretch; gap:0; margin:8px 0 0; }
+  .home-nav-actions .home-scan-link,
+  .home-nav-actions .home-login { display:block; padding:13px 4px; font-size:13px; }
+  .home-nav-actions .home-register { display:flex; width:100%; margin-top:7px; }
+}
+@media (min-width:801px) {
+  .home-nav-panel { display:flex !important; }
+}
