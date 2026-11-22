@@ -34,9 +34,10 @@ It does not own authenticated workspace operations, Marketplace listing or trans
 | /resources | Public guides and product resources | Curated links to available public pages |
 | /support | Visitor guidance and existing support paths | Guidance page; no unsupported support channel is claimed |
 
-**Not yet published:** About/contact enquiry operations and Legal policy pages require approved content, an accountable owner and verified destinations. They are intentionally not linked until those are supplied.
 | /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
 | /p/[token] | Public asset passport | Token-format validation exists; backend passport lookup is not connected |
+
+**Not yet published:** Contact and Legal pages require approved content, an accountable owner and verified destinations. They are intentionally not linked until those are supplied.
 
 A route existing does not mean its underlying backend capability is implemented. Contact and legal pages must not be published as operational destinations until approved contact details and legal documents are supplied.
 
