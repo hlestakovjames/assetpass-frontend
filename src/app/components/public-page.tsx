@@ -22,7 +22,7 @@ export function PublicPage({ eyebrow, title, description, children, primaryHref,
         <div className="home-footer-groups">
           <div className="home-footer-group"><strong>Explore</strong><Link href="/platform">Platform</Link><a href={MARKETPLACE_URL}>Marketplace ↗</a><Link href="/organizations">Organizations</Link><Link href="/how-it-works">How it works</Link></div>
           <div className="home-footer-group"><strong>Company</strong><Link href="/about">About</Link><Link href="/developers">Developers</Link><Link href="/resources">Resources</Link></div>
-          <div className="home-footer-group"><strong>Help & information</strong><Link href="/support">Support</Link><Link href="/security">Security</Link><Link href="/scan">Scan QR</Link></div>
+          <div className="home-footer-group"><strong>Help & information</strong><Link href="/support">Support</Link><Link href="/contact">Contact</Link><Link href="/legal">Legal</Link><Link href="/security">Security</Link><Link href="/scan">Scan QR</Link></div>
         </div>
       </div>
       <div className="home-footer-bottom"><span>© 2026 AssetPass. All rights reserved.</span><span>Asset lifecycle management · Connected marketplace</span></div>
