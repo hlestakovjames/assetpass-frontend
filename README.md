@@ -2,22 +2,21 @@
 
 **Repository:** hlestakovjames/assetpass-frontend  
 **Application responsibility:** Public AssetPass website, product information, public QR/passport entry points and visitor guidance.  
-**Marketplace boundary:** The Marketplace is a separate application. Public-site Marketplace navigation hands visitors to `https://assetpass-app.vercel.app/marketplace`; the public website does not host Marketplace application routes.  
-**Implementation status:** Public presentation and QR scanning foundation; Marketplace listing data, passport lookup, Public AI Assistant, developer portal and contact and legal information pages are published; policy content is a general draft requiring legal review.
+**Marketplace boundary:** Marketplace is a separate application. Public-site Marketplace navigation and the legacy `/marketplace` route hand visitors to `https://assetpass-app.vercel.app/marketplace`.  
+**Implementation status:** Public presentation, contact information and QR-scanning foundation. Marketplace listing data, public passport lookup, Public AI Assistant and developer portal are not currently verified as live. Legal content is a general publication draft requiring legal review.
 
 ## Responsibility boundary
 
-This repository owns the public-facing website experience:
-
+This repository owns:
 - Public AssetPass homepage and Core/Marketplace product information.
-- About, developer information, resources and support guidance.
-- Public organisation and use-case information.
+- About, developer, resources and support information pages.
+- Organization and use-case information.
 - How-it-works and approved security information.
-- QR scanning and public passport landing routes.
+- Contact details and general terms/privacy draft.
+- QR scanning and public passport entry routes.
 - Entry links to the separate Marketplace and authenticated AssetPass application.
-- Published contact channels and public terms/privacy information, with legal draft status clearly disclosed.
 
-It does not own authenticated workspace operations, Marketplace listing or transaction state, authoritative asset records, organisation permissions or backend persistence. Those responsibilities belong to the separate applications and backend services.
+It does not own authenticated workspace operations, Marketplace listing or transaction state, authoritative asset records, organization permissions or backend persistence. Those responsibilities belong to the separate applications and backend services.
 
 ## Public route map
 
@@ -30,26 +29,23 @@ It does not own authenticated workspace operations, Marketplace listing or trans
 | /how-it-works | Public product journey | Presentation route |
 | /security | Approved public security information | Presentation route; claims must match verified controls |
 | /about | AssetPass product overview and positioning | Public information page |
-| /developers | Developer ecosystem information | Explains future developer portal; no public API access is claimed |
+| /developers | Developer ecosystem information | Directional information; no public API access is offered |
 | /resources | Public guides and product resources | Curated links to available public pages |
-| /support | Visitor guidance and existing support paths | Guidance page |
+| /support | Visitor guidance and existing support paths | Guidance page; no ticketing portal is claimed |
 | /contact | Official phone, WhatsApp and email channels | Published contact details |
-| /legal | Public terms and privacy information | General policy draft; legal review required |
-
+| /legal | Public terms and privacy information | General draft; legal review required |
 | /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
 | /p/[token] | Public asset passport | Token-format validation exists; backend passport lookup is not connected |
 
-**Not yet published:** Contact and Legal pages require approved content, an accountable owner and verified destinations. They are intentionally not linked until those are supplied.
-
-A route existing does not mean its underlying backend capability is implemented. Contact channels are supplied by the product owner. The Legal page is a general draft and must be reviewed against the actual operating entity, data practices and applicable law before being treated as final.
+A route existing does not mean its underlying backend capability is implemented. The contact details on the Contact page were supplied by the product owner. The Legal page is a general draft and must be reviewed against the actual operating entity, data practices and applicable law before being treated as final.
 
 ## Marketplace application handoff
 
-The Marketplace is a separate application. Public-site links and the legacy `/marketplace` route lead to its application entry point at `https://assetpass-app.vercel.app/marketplace`. The Marketplace route in the authenticated app is currently an application foundation; public listings, search, filters and listing details are not yet implemented there. The handoff must not be described as proof that live Marketplace discovery is available.
+The Marketplace is a separate application. Public-site links and the legacy `/marketplace` route lead to `https://assetpass-app.vercel.app/marketplace`. The Marketplace route in the authenticated app is currently an application foundation; public listings, search, filters and listing details are not yet implemented there. The handoff must not be described as proof that live Marketplace discovery is available.
 
 ## Public AI Assistant boundary
 
-The **Public AI Assistant is the only AI assistant intended for unauthenticated public website visitors**. Its interface and protected backend integration are not currently verified. Do not display a non-functional chat control as live.
+The Public AI Assistant is the only AI assistant intended for unauthenticated public website visitors. Its interface and protected backend integration are not currently verified. Do not display a non-functional chat control as live.
 
 It must use approved public content and public discovery APIs only. It must not access private workspaces, private asset records, evidence, custody identities, exact private locations, internal notes, reviewer decisions or internal intelligence capabilities.
 
@@ -80,8 +76,8 @@ Open http://localhost:3000.
 - Login and registration hand off to the authenticated AssetPass application.
 - Marketplace navigation hands off to the separate Marketplace application.
 - Do not hard-code an unconfirmed custom production domain.
-- Do not invent contact details, support channels, legal terms or privacy-policy wording.
-- Contact and Legal pages require approved content and real destinations before publication.
+- Use only the published phone, WhatsApp and email details for contact links.
+- Legal wording is a general draft; do not represent it as legal advice or a completed legal review.
 - Do not claim public API access or developer integrations until the developer portal and API access policy are implemented.
 - Static or illustrative content must be labelled accurately.
 - Keep the public website usable if Marketplace, workspace or assistant services are unavailable.
