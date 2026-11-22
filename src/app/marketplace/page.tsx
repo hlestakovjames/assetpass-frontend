@@ -71,7 +71,7 @@ export default function MarketplacePage() {
     </ContentSection>
 
     <section className="marketplace-core-bridge">
-      <div><span className="marketplace-kicker">CONNECTED TO ASSETPASS CORE</span><h2>Discovery outside. Accountability inside.</h2><p>The Marketplace complements AssetPass Core. Core is designed to support asset records and custody lifecycle activity; the Marketplace provides a separate discovery experience. A listing by itself does not change an asset's legal ownership, custody or status in an organization's records.</p><Link href="/platform" className="marketplace-bridge-link">Explore AssetPass Core <span aria-hidden="true">→</span></Link></div>
+      <div><span className="marketplace-kicker">CONNECTED TO ASSETPASS CORE</span><h2>Discovery outside. Accountability inside.</h2><p>The Marketplace complements AssetPass Core. Core is designed to support asset records and custody lifecycle activity; the Marketplace provides a separate discovery experience. A listing by itself does not change an asset&apos;s legal ownership, custody or status in an organization&apos;s records.</p><Link href="/platform" className="marketplace-bridge-link">Explore AssetPass Core <span aria-hidden="true">→</span></Link></div>
       <div className="marketplace-bridge-graphic"><div className="bridge-node"><span>▦</span><strong>Marketplace</strong><small>Discover & connect</small></div><div className="bridge-line"><i></i><span>Verified process</span><i></i></div><div className="bridge-node bridge-node-core"><span>◇</span><strong>AssetPass Core</strong><small>Records & custody</small></div></div>
     </section>
 
