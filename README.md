@@ -33,8 +33,8 @@ It does not own authenticated workspace operations, Marketplace listing or trans
 | /developers | Developer ecosystem information | Explains future developer portal; no public API access is claimed |
 | /resources | Public guides and product resources | Curated links to available public pages |
 | /support | Visitor guidance and existing support paths | Guidance page; no unsupported support channel is claimed |
-| /contact | Contact information and enquiry destination | Pending approved contact channel |
-| /legal | Legal notices and policy documents | Pending approved legal content and publication |
+
+**Not yet published:** About/contact enquiry operations and Legal policy pages require approved content, an accountable owner and verified destinations. They are intentionally not linked until those are supplied.
 | /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
 | /p/[token] | Public asset passport | Token-format validation exists; backend passport lookup is not connected |
 
