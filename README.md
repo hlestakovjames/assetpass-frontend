@@ -3,7 +3,7 @@
 **Repository:** hlestakovjames/assetpass-frontend  
 **Application responsibility:** Public AssetPass website, product information, public QR/passport entry points and visitor guidance.  
 **Marketplace boundary:** The Marketplace is a separate application. Public-site Marketplace navigation hands visitors to `https://assetpass-app.vercel.app/marketplace`; the public website does not host Marketplace application routes.  
-**Implementation status:** Public presentation and QR scanning foundation; Marketplace listing data, passport lookup, Public AI Assistant, developer portal and contact/legal operations must not be described as live until verified and approved.
+**Implementation status:** Public presentation and QR scanning foundation; Marketplace listing data, passport lookup, Public AI Assistant, developer portal and contact and legal information pages are published; policy content is a general draft requiring legal review.
 
 ## Responsibility boundary
 
@@ -32,7 +32,9 @@ It does not own authenticated workspace operations, Marketplace listing or trans
 | /about | AssetPass product overview and positioning | Public information page |
 | /developers | Developer ecosystem information | Explains future developer portal; no public API access is claimed |
 | /resources | Public guides and product resources | Curated links to available public pages |
-| /support | Visitor guidance and existing support paths | Guidance page; no unsupported support channel is claimed |
+| /support | Visitor guidance and existing support paths | Guidance page |
+| /contact | Official phone, WhatsApp and email channels | Published contact details |
+| /legal | Public terms and privacy information | General policy draft; legal review required |
 
 | /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
 | /p/[token] | Public asset passport | Token-format validation exists; backend passport lookup is not connected |
