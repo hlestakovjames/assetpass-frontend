@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PublicNavigation } from "./components/public-navigation";
 
@@ -13,7 +14,15 @@ const lifecycle = [
 ];
 
 function BrandMark() {
-  return <span className="home-brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 3.8 40 10v12.5c0 10.1-6.5 17.3-16 21.7C14.5 39.8 8 32.6 8 22.5V10L24 3.8Z" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/><path d="m15.5 24 5.6 5.6L33 17.7" stroke="#2DD4BF" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg></span>;
+  return (
+    <Image
+      src="/brand/Assetpass%20Logo.png"
+      alt=""
+      width={48}
+      height={48}
+      className="home-brand-mark"
+    />
+  );
 }
 
 export default function Home() {
@@ -48,7 +57,7 @@ export default function Home() {
       <div className="release-section-heading"><div><small>THE ASSETPASS ECOSYSTEM</small><h2>Two connected experiences.</h2></div><p>Core asset management and Marketplace discovery work alongside one another while retaining their distinct responsibilities.</p></div>
       <div className="release-pillar-grid">
         <article className="release-pillar release-core"><span className="release-index">01 / ASSETPASS CORE</span><div className="release-pillar-icon">◈</div><h3>Manage assets with clarity.</h3><p>Build structured asset records and keep identification, custody, condition and supported lifecycle activity connected.</p><ul><li>Asset registration and digital identity</li><li>Custody and responsibility tracking</li><li>Inspections and maintenance records</li><li>Lifecycle visibility and reporting</li></ul><Link href="/platform">Explore AssetPass Core <b>→</b></Link></article>
-        <article className="release-pillar release-market"><span className="release-index">02 / ASSETPASS MARKETPLACE</span><div className="release-market-art"><div className="release-market-orbit"/><span>DISCOVER<br/>CONNECT<br/>CIRCULATE</span></div><h3>Discover new asset opportunities.</h3><p>Enter a dedicated Marketplace experience designed for public discovery and the controlled circulation of eligible assets.</p><ul><li>Separate Marketplace application</li><li>Public discovery as capabilities are released</li><li>Sale, donation and exchange opportunities</li><li>Listing activity does not itself transfer custody</li></ul><a href={MARKETPLACE_URL}>Enter AssetPass Marketplace <b>↗</b></a></article>
+        <article className="release-pillar release-market"><span className="release-index">02 / ASSETPASS MARKETPLACE</span><div className="release-market-art"><div className="release-market-orbit"/><Image src="/brand/Assetpass%20Marketplace%20icon.png" alt="" width={68} height={68} className="relative z-10 h-[68px] w-[68px] object-contain" /></div><h3>Discover new asset opportunities.</h3><p>Enter a dedicated Marketplace experience designed for public discovery and the controlled circulation of eligible assets.</p><ul><li>Separate Marketplace application</li><li>Public discovery as capabilities are released</li><li>Sale, donation and exchange opportunities</li><li>Listing activity does not itself transfer custody</li></ul><a href={MARKETPLACE_URL}>Enter AssetPass Marketplace <b>↗</b></a></article>
       </div>
     </div></section>
 
