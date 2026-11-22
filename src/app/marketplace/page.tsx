@@ -71,7 +71,7 @@ export default function MarketplacePage() {
     </ContentSection>
 
     <section className="marketplace-core-bridge">
-      <div><span className="marketplace-kicker">CONNECTED TO ASSETPASS CORE</span><h2>Discovery outside. Accountability inside.</h2><p>The Marketplace complements AssetPass Core. Core supports an organization's asset records and custody lifecycle; the Marketplace provides a separate space to discover and explore opportunities. A listing by itself does not change an asset's ownership, custody or status in an organization's records.</p><Link href="/platform" className="marketplace-bridge-link">Explore AssetPass Core <span aria-hidden="true">→</span></Link></div>
+      <div><span className="marketplace-kicker">CONNECTED TO ASSETPASS CORE</span><h2>Discovery outside. Accountability inside.</h2><p>The Marketplace complements AssetPass Core. Core supports an organization&apos;s asset records and custody lifecycle; the Marketplace provides a separate space to discover and explore opportunities. A listing by itself does not change an asset&apos;s ownership, custody or status in an organization&apos;s records.</p><Link href="/platform" className="marketplace-bridge-link">Explore AssetPass Core <span aria-hidden="true">→</span></Link></div>
       <div className="marketplace-bridge-graphic"><div className="bridge-node"><span>▦</span><strong>Marketplace</strong><small>Discover & connect</small></div><div className="bridge-line"><i></i><span>Verified process</span><i></i></div><div className="bridge-node bridge-node-core"><span>◇</span><strong>AssetPass Core</strong><small>Records & custody</small></div></div>
     </section>
 
@@ -83,7 +83,7 @@ export default function MarketplacePage() {
       </div>
     </ContentSection>
 
-    <section className="marketplace-final-cta"><span className="marketplace-kicker">BE PART OF THE ASSETPASS ECOSYSTEM</span><h2>Discover what's possible with connected assets.</h2><p>Create an account to get started with the AssetPass ecosystem.</p><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started with AssetPass <span aria-hidden="true">→</span></a></section>
+    <section className="marketplace-final-cta"><span className="marketplace-kicker">BE PART OF THE ASSETPASS ECOSYSTEM</span><h2>Discover what&apos;s possible with connected assets.</h2><p>Create an account to get started with the AssetPass ecosystem.</p><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started with AssetPass <span aria-hidden="true">→</span></a></section>
     <p className="marketplace-release-note">Public browsing is the intended marketplace experience and should not require login. Live listing search, listing detail pages and seller publishing depend on the marketplace backend and are not yet connected on this public website. Transaction execution, payment processing and escrow are not represented as available services.</p>
   </PublicPage>;
 }

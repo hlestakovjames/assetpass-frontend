@@ -8,6 +8,6 @@ export default function SecurityPage() {
       <article className="inner-card"><h3>Traceable activity</h3><p>Important actions and lifecycle transitions are designed to retain an accountable history.</p></article>
       <article className="inner-card"><h3>Privacy-conscious QR access</h3><p>Public passport views are limited to approved asset information rather than private custody, financial or operational records.</p></article>
     </div></ContentSection>
-    <ContentSection title="Public passport information"><p>Public QR experiences are intended to disclose only an asset's approved name, category, general status and general condition. Serial numbers, custodian identity, precise location, financial details, private notes and internal audit history are not public passport fields.</p></ContentSection>
+    <ContentSection title="Public passport information"><p>Public QR experiences are intended to disclose only an asset&apos;s approved name, category, general status and general condition. Serial numbers, custodian identity, precise location, financial details, private notes and internal audit history are not public passport fields.</p></ContentSection>
   </PublicPage>;
 }
