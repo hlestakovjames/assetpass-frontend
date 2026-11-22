@@ -15,7 +15,7 @@ This repository owns the public-facing website experience:
 - How-it-works and approved security information.
 - QR scanning and public passport landing routes.
 - Entry links to the separate Marketplace and authenticated AssetPass application.
-- Contact and legal information pages only when their content, owners and destinations are approved.
+- Published contact channels and public terms/privacy information, with legal draft status clearly disclosed.
 
 It does not own authenticated workspace operations, Marketplace listing or transaction state, authoritative asset records, organisation permissions or backend persistence. Those responsibilities belong to the separate applications and backend services.
 
@@ -41,7 +41,7 @@ It does not own authenticated workspace operations, Marketplace listing or trans
 
 **Not yet published:** Contact and Legal pages require approved content, an accountable owner and verified destinations. They are intentionally not linked until those are supplied.
 
-A route existing does not mean its underlying backend capability is implemented. Contact and legal pages must not be published as operational destinations until approved contact details and legal documents are supplied.
+A route existing does not mean its underlying backend capability is implemented. Contact channels are supplied by the product owner. The Legal page is a general draft and must be reviewed against the actual operating entity, data practices and applicable law before being treated as final.
 
 ## Marketplace application handoff
 
