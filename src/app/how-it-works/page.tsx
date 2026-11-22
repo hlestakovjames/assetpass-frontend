@@ -8,8 +8,14 @@ const stages = [
 ];
 
 export default function HowItWorksPage() {
-  return <PublicPage eyebrow="HOW ASSETPASS WORKS" title="From physical assets to connected records." description="AssetPass links an asset's physical identity to the information, responsibility and lifecycle activity that help organizations manage it.">
-    <ContentSection title="A connected asset journey"><div className="inner-grid">{stages.map(([number,title,copy]) => <article className="inner-card" key={number}><h3>{number} · {title}</h3><p>{copy}</p></article>)}</div></ContentSection>
-    <ContentSection title="QR-enabled identification"><p>A QR code provides a convenient bridge between a physical asset and its digital passport. Public passport experiences are limited to approved information; restricted custody and operational details remain subject to authorization.</p><a href="/scan" className="home-primary-button">Open QR scanner <span aria-hidden="true">→</span></a></ContentSection>
+  return <PublicPage eyebrow="HOW ASSETPASS WORKS" title="From physical assets to connected records." description="AssetPass is designed to link an asset's physical identity to the information, responsibility and lifecycle activity that help people and organizations manage it.">
+    <ContentSection title="A connected asset journey">
+      <div className="inner-grid">{stages.map(([number,title,copy]) => <article className="inner-card" key={number}><h3>{number} · {title}</h3><p>{copy}</p></article>)}</div>
+      <p>This is the intended Core journey. Specific workflows become available as the corresponding capabilities are released in the authenticated application.</p>
+    </ContentSection>
+    <ContentSection title="QR-enabled identification">
+      <p>A QR code provides a convenient bridge between a physical asset and its digital passport. A public QR token is a lookup reference, not an authorization credential. Public passport experiences are limited to approved information; restricted custody and operational details remain subject to authorization.</p>
+      <a href="/scan" className="home-primary-button">Open QR scanner <span aria-hidden="true">→</span></a>
+    </ContentSection>
   </PublicPage>;
 }

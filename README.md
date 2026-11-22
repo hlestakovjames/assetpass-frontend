@@ -1,123 +1,87 @@
 # AssetPass Public Website
 
 **Repository:** hlestakovjames/assetpass-frontend  
-**Application responsibility:** Public AssetPass website, public Marketplace discovery presentation, QR/passport entry points and public visitor assistance.  
-**Implementation status:** Public presentation and QR scanning foundation; Marketplace listing data, passport lookup and the Public AI Assistant are tracked separately and must not be described as live until verified.
+**Application responsibility:** Public AssetPass website, product information, public QR/passport entry points and visitor guidance.  
+**Marketplace boundary:** Marketplace is a separate application. Public-site Marketplace navigation and the legacy `/marketplace` route hand visitors to `https://assetpass-app.vercel.app/marketplace`.  
+**Implementation status:** Public presentation, contact information and QR-scanning foundation. Marketplace listing data, public passport lookup, Public AI Assistant and developer portal are not currently verified as live. Legal content is a general publication draft requiring legal review.
 
 ## Responsibility boundary
 
-This repository owns the public-facing website experience:
-
+This repository owns:
 - Public AssetPass homepage and Core/Marketplace product information.
-- Public organisation and use-case information.
+- About, developer, resources and support information pages.
+- Organization and use-case information.
 - How-it-works and approved security information.
-- Public Marketplace discovery presentation.
-- QR scanning and public passport landing routes.
-- Entry links to the authenticated AssetPass application.
-- The public-facing AI Assistant interface when its approved integration is implemented.
+- Contact details and general terms/privacy draft.
+- QR scanning and public passport entry routes.
+- Entry links to the separate Marketplace and authenticated AssetPass application.
 
-It does not own authenticated workspace operations, platform administration, authoritative asset records, organisation permissions, Marketplace transaction state or backend persistence. Those responsibilities belong to assetpass-app and assetpass-backend according to the documented domain boundaries.
+It does not own authenticated workspace operations, Marketplace listing or transaction state, authoritative asset records, organization permissions or backend persistence. Those responsibilities belong to the separate applications and backend services.
+
+## Public route map
+
+| Route | Purpose | Status |
+|---|---|---|
+| / | Public homepage explaining Core and Marketplace | Redesigned presentation |
+| /platform | Core asset-management information | Presentation route |
+| /marketplace | Redirect to the separate Marketplace application | Application handoff |
+| /organizations | Organization use cases | Presentation route |
+| /how-it-works | Public product journey | Presentation route |
+| /security | Approved public security information | Presentation route; claims must match verified controls |
+| /about | AssetPass product overview and positioning | Public information page |
+| /developers | Developer ecosystem information | Directional information; no public API access is offered |
+| /resources | Public guides and product resources | Curated links to available public pages |
+| /support | Visitor guidance and existing support paths | Guidance page; no ticketing portal is claimed |
+| /contact | Official phone, WhatsApp and email channels | Published contact details |
+| /legal | Public terms and privacy information | General draft; legal review required |
+| /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
+| /p/[token] | Public asset passport | Token-format validation exists; backend passport lookup is not connected |
+
+A route existing does not mean its underlying backend capability is implemented. The contact details on the Contact page were supplied by the product owner. The Legal page is a general draft and must be reviewed against the actual operating entity, data practices and applicable law before being treated as final.
+
+## Marketplace application handoff
+
+The Marketplace is a separate application. Public-site links and the legacy `/marketplace` route lead to `https://assetpass-app.vercel.app/marketplace`. The Marketplace route in the authenticated app is currently an application foundation; public listings, search, filters and listing details are not yet implemented there. The handoff must not be described as proof that live Marketplace discovery is available.
 
 ## Public AI Assistant boundary
 
-The **Public AI Assistant is the only AI assistant exposed to unauthenticated public website visitors**.
+The Public AI Assistant is the only AI assistant intended for unauthenticated public website visitors. Its interface and protected backend integration are not currently verified. Do not display a non-functional chat control as live.
 
-Its permitted public role is to answer questions using approved public AssetPass content and explicitly public discovery services, explain the public Core and Marketplace experiences, help visitors navigate the website and direct them to registration, login or support journeys.
+It must use approved public content and public discovery APIs only. It must not access private workspaces, private asset records, evidence, custody identities, exact private locations, internal notes, reviewer decisions or internal intelligence capabilities.
 
-It must not:
+## Public QR and privacy boundary
 
-- Access private individual or organisation workspaces or private asset records.
-- Reveal evidence, custody identities, exact private locations, internal notes, reviewer decisions or non-public organisation data.
-- Expose internal intelligence findings, specialist intelligence domains, internal assistant interfaces, platform configuration, security details, prompts or model configuration.
-- Claim that illustrative, planned or unverified capabilities are live.
-- Perform account administration, approve applications, verify legal ownership, change permissions or execute consequential actions.
+The approved public passport allowlist is asset name, category, general status and general condition. Serial numbers, custodian identity, precise location, financial information, private notes, internal maintenance/disposal details and audit history are not public fields. A passport token is a lookup reference, not an authorization credential.
 
-The public website must remain usable if the assistant service is unavailable. The assistant must use a protected server-side integration; model-provider secrets must never be placed in browser code.
+## Technology and local development
 
-**Implementation status:** The reviewed public website main source does not currently contain a verified, working Public AI Assistant interface or backend integration. Treat the assistant as an architectural/product requirement until its implementation, API contract, privacy controls, abuse protections and tests are present and verified. Do not display a non-functional chat control as if it were live.
-
-Internal assistants belong to their authenticated application contexts and are not exposed through this public website.
-
-## Current routes
-
-| Route | Purpose | Current status |
-|---|---|---|
-| / | Public homepage | Implemented presentation |
-| /platform | Public Core asset-management information | Presentation route |
-| /marketplace | Public Marketplace discovery | Presentation prototype; listing examples are illustrative/static |
-| /organizations | Public organisation information | Presentation route |
-| /how-it-works | Public product explanation | Presentation route |
-| /security | Public security information | Presentation route; statements must match verified controls |
-| /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
-| /p/[token] | Public asset passport | Route and token-format validation exist; backend passport lookup is not connected |
-
-A route existing does not mean its underlying backend capability is implemented. The public passport page currently states that no asset record is retrieved.
-
-## Release 1 public scope
-
-The public website communicates two connected product pillars:
-
-1. **AssetPass Core:** structured asset records, identification, custody/accountability and supported lifecycle activity.
-2. **AssetPass Marketplace:** public discovery and controlled circulation of eligible assets through capabilities actually released.
-
-Do not create public Intelligence product pages or disclose internal intelligence architecture. The Public AI Assistant is the only visitor-facing AI interface and must remain limited to approved public information.
-
-## Technology
-
-- Next.js 16.4.2
-- React 19.3.0
-- TypeScript 5
+- Next.js 16.4.6
+- React 19
+- TypeScript
 - Tailwind CSS 4
-- html5-qrcode for browser QR scanning
 
-## Local development
+Requires Node.js 22 and npm.
 
-Requires Node.js 22 (align with the backend/app CI runtime) and npm.
-
-~~~bash
+```bash
 npm ci
-npm run dev
-~~~
-
-Open [http://localhost:3000](http://localhost:3000).
-
-Available scripts:
-
-~~~bash
 npm run dev
 npm run lint
 npm run build
-npm run start
-~~~
+```
 
-## Integration rules
+Open http://localhost:3000.
 
-- Public data must come from approved public backend contracts.
-- Never expose private asset fields, custodian information, exact private locations, evidence, internal notes or organisation-only records through public routes.
-- Public Marketplace discovery must consume the authoritative Marketplace domain; static examples must remain clearly labelled as illustrative.
-- A public passport token is a lookup reference, not an authorization credential.
-- The public QR scanner accepts full passport URLs only from the current deployment hostname; no unconfirmed custom domain is hard-coded.
-- Public passport responses must enforce the approved four-field allowlist: asset name, category, general status and general condition.
-- Public routes must not require AI or workspace services to be available merely to render core website content.
-- The Public AI Assistant may use only approved public content and public discovery APIs.
-- Sign-in and registration should link to the authenticated app rather than duplicating authentication state here.
-- Do not hard-code an unconfirmed custom production domain; use verified deployment URLs and environment-specific configuration.
+## Integration and content rules
 
-## Development status and next alignment work
-
-1. Add/maintain CI for dependency installation, lint and production build.
-2. Define the public API client and approved-public-data contracts before connecting Marketplace or passport data.
-3. Connect public passport lookup only after backend token resolution, disclosure policy and abuse controls are defined.
-4. Implement the Public AI Assistant only after its backend API contract, approved knowledge sources, safety/abuse controls, privacy behavior and tests are agreed.
-5. Reconcile public Marketplace deployment boundaries with the shared Marketplace domain and the authenticated app.
-6. Add automated tests for token parsing, URL allow-listing, public/private disclosure and assistant source restrictions.
-
-## Documentation and README maintenance
-
-Every public website implementation change must update this README in the same pull request when it changes routes, capabilities, setup, environment variables, integration contracts or known limitations. Update the corresponding architecture/API/acceptance documentation in assetpass-docs as part of the same coordinated delivery.
-
-Track planned, in-development, implemented, tested, deployed and enabled as separate states. A mockup, route or README entry is not evidence of a working capability.
+- Login and registration hand off to the authenticated AssetPass application.
+- Marketplace navigation hands off to the separate Marketplace application.
+- Do not hard-code an unconfirmed custom production domain.
+- Use only the published phone, WhatsApp and email details for contact links.
+- Legal wording is a general draft; do not represent it as legal advice or a completed legal review.
+- Do not claim public API access or developer integrations until the developer portal and API access policy are implemented.
+- Static or illustrative content must be labelled accurately.
+- Keep the public website usable if Marketplace, workspace or assistant services are unavailable.
 
 ## Source of truth
 
-The architecture, product scope, requirements, API boundaries and acceptance criteria are maintained in [assetpass-docs](https://github.com/hlestakovjames/assetpass-docs), especially [Public Website Architecture](https://github.com/hlestakovjames/assetpass-docs/blob/main/architecture/public-website-architecture.md).
+Product scope, public boundaries and application architecture are maintained in [assetpass-docs](https://github.com/hlestakovjames/assetpass-docs), especially [Public Website Architecture](https://github.com/hlestakovjames/assetpass-docs/blob/main/architecture/public-website-architecture.md) and [AssetPass Release 1 Redesign Brief](https://github.com/hlestakovjames/assetpass-docs/blob/main/ux/assetpass-release-1-frontend-redesign-brief.md).
