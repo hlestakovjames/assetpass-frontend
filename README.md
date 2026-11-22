@@ -1,7 +1,7 @@
 # AssetPass Public Website
 
 **Repository:** hlestakovjames/assetpass-frontend  
-**Application responsibility:** Public AssetPass website, public Marketplace discovery presentation, QR/passport entry points and public visitor assistance.  
+**Application responsibility:** Public AssetPass website, public Core and Marketplace information, QR/passport entry points and public visitor navigation.  
 **Implementation status:** Public presentation and QR scanning foundation; Marketplace listing data, passport lookup and the Public AI Assistant are tracked separately and must not be described as live until verified.
 
 ## Responsibility boundary
@@ -14,7 +14,7 @@ This repository owns the public-facing website experience:
 - Public Marketplace discovery presentation.
 - QR scanning and public passport landing routes.
 - Entry links to the authenticated AssetPass application.
-- The public-facing AI Assistant interface when its approved integration is implemented.
+- The Public AI Assistant interface only when its approved integration is implemented and verified.
 
 It does not own authenticated workspace operations, platform administration, authoritative asset records, organisation permissions, Marketplace transaction state or backend persistence. Those responsibilities belong to assetpass-app and assetpass-backend according to the documented domain boundaries.
 
@@ -47,7 +47,7 @@ Internal assistants belong to their authenticated application contexts and are n
 | /marketplace | Public Marketplace discovery | Presentation prototype; listing examples are illustrative/static |
 | /organizations | Public organisation information | Presentation route |
 | /how-it-works | Public product explanation | Presentation route |
-| /security | Public security information | Presentation route; statements must match verified controls |
+| /security | Public security information | Presentation route; statements describe design boundaries, not a certification |
 | /scan | Browser QR scanner and manual token entry | Scanner interaction implemented |
 | /p/[token] | Public asset passport | Route and token-format validation exist; backend passport lookup is not connected |
 
@@ -60,11 +60,11 @@ The public website communicates two connected product pillars:
 1. **AssetPass Core:** structured asset records, identification, custody/accountability and supported lifecycle activity.
 2. **AssetPass Marketplace:** public discovery and controlled circulation of eligible assets through capabilities actually released.
 
-Do not create public Intelligence product pages or disclose internal intelligence architecture. The Public AI Assistant is the only visitor-facing AI interface and must remain limited to approved public information.
+Do not create public Intelligence product pages or disclose internal intelligence architecture. The Public AI Assistant is the only visitor-facing AI interface and must remain limited to approved public information. Do not add a chat control until the assistant is implemented and enabled.
 
 ## Technology
 
-- Next.js 16.4.2
+- Next.js 16.4.6
 - React 19.3.0
 - TypeScript 5
 - Tailwind CSS 4
@@ -105,12 +105,11 @@ npm run start
 
 ## Development status and next alignment work
 
-1. Add/maintain CI for dependency installation, lint and production build.
-2. Define the public API client and approved-public-data contracts before connecting Marketplace or passport data.
-3. Connect public passport lookup only after backend token resolution, disclosure policy and abuse controls are defined.
-4. Implement the Public AI Assistant only after its backend API contract, approved knowledge sources, safety/abuse controls, privacy behavior and tests are agreed.
-5. Reconcile public Marketplace deployment boundaries with the shared Marketplace domain and the authenticated app.
-6. Add automated tests for token parsing, URL allow-listing, public/private disclosure and assistant source restrictions.
+1. Define the public API client and approved-public-data contracts before connecting Marketplace or passport data.
+2. Connect public passport lookup only after backend token resolution, disclosure policy and abuse controls are defined.
+3. Implement the Public AI Assistant only after its backend API contract, approved knowledge sources, safety/abuse controls, privacy behavior and tests are agreed.
+4. Reconcile public Marketplace deployment boundaries with the shared Marketplace domain and the authenticated app.
+5. Add automated tests for token parsing, URL allow-listing, public/private disclosure and assistant source restrictions.
 
 ## Documentation and README maintenance
 
