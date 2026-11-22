@@ -61,13 +61,10 @@ export default function ScanPage() {
         } else if (/^https?:\/\//i.test(value)) {
           const parsed = new URL(value);
           const host = parsed.hostname.toLowerCase();
-          const allowedHosts = [
-            "assetpass.com",
-            "www.assetpass.com",
-            window.location.hostname.toLowerCase(),
-          ];
-
-          if (!allowedHosts.includes(host)) {
+          // Accept passport URLs only from this deployment's own host.
+          // This keeps the scanner independent of an unconfirmed custom domain
+          // and prevents arbitrary external URLs from being treated as passports.
+          if (host !== window.location.hostname.toLowerCase()) {
             setError("This QR code links to an unrecognised website.");
             return;
           }
