@@ -96,7 +96,6 @@ npm run start
 - Never expose private asset fields, custodian information, exact private locations, evidence, internal notes or organisation-only records through public routes.
 - Public Marketplace discovery must consume the authoritative Marketplace domain; static examples must remain clearly labelled as illustrative.
 - A public passport token is a lookup reference, not an authorization credential.
-- The public QR scanner accepts full passport URLs only from the current deployment hostname; no unconfirmed custom domain is hard-coded.
 - Public passport responses must enforce the approved four-field allowlist: asset name, category, general status and general condition.
 - Public routes must not require AI or workspace services to be available merely to render core website content.
 - The Public AI Assistant may use only approved public content and public discovery APIs.
