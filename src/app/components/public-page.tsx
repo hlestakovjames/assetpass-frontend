@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { PublicNavigation } from "./public-navigation";
@@ -5,7 +6,15 @@ import { PublicNavigation } from "./public-navigation";
 const MARKETPLACE_URL = "https://assetpass-app.vercel.app/marketplace";
 
 function Mark() {
-  return <span className="home-brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 3.8 40 10v12.5c0 10.1-6.5 17.3-16 21.7C14.5 39.8 8 32.6 8 22.5V10L24 3.8Z" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/><path d="m15.5 24 5.6 5.6L33 17.7" stroke="#2DD4BF" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg></span>;
+  return (
+    <Image
+      src="/brand/Assetpass%20Logo.png"
+      alt=""
+      width={48}
+      height={48}
+      className="home-brand-mark"
+    />
+  );
 }
 
 export function PublicPage({ eyebrow, title, description, children, primaryHref, primaryLabel, secondaryHref, secondaryLabel }: { eyebrow: string; title: string; description: string; children: ReactNode; primaryHref?: string; primaryLabel?: string; secondaryHref?: string; secondaryLabel?: string }) {

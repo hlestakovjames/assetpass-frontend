@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Manage assets. Extend their value. Keep every transition accountable. AssetPass connects asset lifecycle management with a dedicated Marketplace experience.",
   applicationName: "AssetPass",
+  icons: { icon: [{ url: "/brand/Assetpass%20Logo.png", type: "image/png" }] },
   keywords: [
     "asset management",
     "asset lifecycle management",
