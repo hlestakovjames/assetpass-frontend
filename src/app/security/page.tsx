@@ -12,7 +12,7 @@ export default function SecurityPage() {
       </div>
     </ContentSection>
     <ContentSection title="Public passport information">
-      <p>The approved public passport information is limited to an asset's name, category, general status and general condition. Serial numbers, custodian identity, precise private location, financial details, evidence references, private notes, reviewer decisions and internal audit history are not public passport fields.</p>
+      <p>The approved public passport information is limited to an asset&apos;s name, category, general status and general condition. Serial numbers, custodian identity, precise private location, financial details, evidence references, private notes, reviewer decisions and internal audit history are not public passport fields.</p>
       <p>These statements describe the approved design boundaries. They are not a certification or a claim that every planned control has been independently assessed. Public passport lookup is not connected until its backend disclosure controls are implemented and verified.</p>
     </ContentSection>
   </PublicPage>;
