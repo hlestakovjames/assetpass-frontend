@@ -2,18 +2,18 @@ import Link from "next/link";
 import { PublicNavigation } from "./components/public-navigation";
 
 const coreCapabilities = [
-  { number: "01", title: "Asset lifecycle", copy: "Maintain structured records from registration and assignment through maintenance, retirement and disposal.", icon: "◈" },
-  { number: "02", title: "Custody & accountability", copy: "Know who is responsible for an asset and preserve a traceable history of custody changes.", icon: "⇄" },
+  { number: "01", title: "Asset lifecycle", copy: "A structured approach to records from registration and assignment through supported maintenance, retirement and disposal activity.", icon: "◈" },
+  { number: "02", title: "Custody & accountability", copy: "Record responsibility for an asset and retain a traceable history of supported custody changes.", icon: "⇄" },
   { number: "03", title: "Digital asset passports", copy: "Connect physical assets to digital identities through QR-enabled passport links.", icon: "▦" },
-  { number: "04", title: "Condition & maintenance", copy: "Keep inspection and maintenance activity connected to the asset record.", icon: "⌁" },
-  { number: "05", title: "Visibility & reporting", copy: "Bring asset information and operational activity together for clearer decisions.", icon: "▥" },
+  { number: "04", title: "Condition & maintenance", copy: "Connect inspection and maintenance activity to the asset record where those workflows are available.", icon: "⌁" },
+  { number: "05", title: "Visibility & reporting", copy: "Bring asset information and operational activity together to support clearer decisions.", icon: "▥" },
   { number: "06", title: "Governance & auditability", copy: "Support controlled access, accountable workflows and retained lifecycle history.", icon: "⬡" },
 ];
 
 const steps = [
   { number: "01", title: "Establish the record", copy: "Register an asset and create its structured digital identity." },
   { number: "02", title: "Identify it physically", copy: "Connect the asset to a QR-enabled passport for convenient identification." },
-  { number: "03", title: "Manage responsibility", copy: "Record custody, condition and lifecycle activity through controlled workflows." },
+  { number: "03", title: "Manage responsibility", copy: "Record custody, condition and supported lifecycle activity through controlled workflows." },
   { number: "04", title: "Make informed decisions", copy: "Use consistent records and history to support oversight and accountability." },
 ];
 
@@ -64,18 +64,18 @@ export default function Home() {
         <div className="home-container home-hero-layout">
           <div className="home-hero-copy">
             <div className="home-eyebrow"><span /> ASSET MANAGEMENT, CONNECTED</div>
-            <h1>Manage what you own.<br /><em>Connect what you need.</em></h1>
-            <p>AssetPass brings structured asset lifecycle management and a connected marketplace into one platform — helping organizations maintain control of their assets and discover new opportunities.</p>
+            <h1>Manage the assets you oversee.<br /><em>Discover new opportunities.</em></h1>
+            <p>AssetPass connects two experiences: structured asset lifecycle management through AssetPass Core, and public discovery through the AssetPass Marketplace. Together, they help people and organizations manage assets and explore opportunities.</p>
             <div className="home-hero-actions">
               <Link href="/platform" className="home-primary-button">Explore AssetPass <ArrowIcon /></Link>
               <Link href="/scan" className="home-secondary-button"><span>▦</span> Scan an asset</Link>
             </div>
-            <div className="home-hero-assurance"><span>✓</span> Built around accountability, visibility and trusted connections</div>
+            <div className="home-hero-assurance"><span>✓</span> Designed around accountability, visibility and trusted connections</div>
           </div>
           <div className="home-hero-art" aria-label="Illustration of an AssetPass digital asset record">
             <div className="home-art-ring home-ring-one" /><div className="home-art-ring home-ring-two" />
             <div className="home-record-card">
-              <div className="home-record-top"><div className="home-record-brand"><BrandMark /><b>ASSET<span>PASS</span></b></div><span className="home-record-tag">DIGITAL IDENTITY</span></div>
+              <div className="home-record-top"><div className="home-record-brand"><BrandMark /><b>ASSET<span>PASS</span></b></div><span className="home-record-tag">CONCEPT PREVIEW</span></div>
               <div className="home-record-illustration"><div className="home-device"><div className="home-device-screen"><BrandMark /><span>ASSET RECORD</span><div className="home-screen-lines"><i /><i /><i /></div></div><div className="home-device-base" /></div></div>
               <div className="home-record-bottom"><div><small>ASSET PASSPORT</small><strong>One asset. One identity.</strong><p>A connected lifecycle record</p></div><div className="home-qr-wrap"><QrGraphic /></div></div>
             </div>
@@ -88,51 +88,52 @@ export default function Home() {
 
       <section className="home-intro-band">
         <div className="home-container home-intro-grid">
-          <div><small>ONE PLATFORM. TWO CONNECTED PILLARS.</small><h2>Control your assets.<br />Unlock new possibilities.</h2></div>
-          <p>From the assets an organization already manages to the opportunities it can discover, AssetPass is designed to connect information, responsibility and access in a more structured way.</p>
+          <div><small>ONE ECOSYSTEM. TWO PUBLIC PILLARS.</small><h2>Manage assets.<br />Discover opportunities.</h2></div>
+          <p>From the assets an organization already manages to opportunities it can discover, AssetPass is designed to connect information, responsibility and access in a more structured way.</p>
         </div>
       </section>
 
       <section className="home-section home-pillars" id="platform">
         <div className="home-container">
-          <div className="home-section-heading"><div><small>THE ASSETPASS ECOSYSTEM</small><h2>Two pillars. One connected platform.</h2></div><p>Bring operational control and marketplace discovery together without losing sight of ownership, accountability or the asset record.</p></div>
+          <div className="home-section-heading"><div><small>THE ASSETPASS ECOSYSTEM</small><h2>Two pillars. One connected ecosystem.</h2></div><p>Bring asset accountability and marketplace discovery together while keeping listing activity distinct from authoritative ownership and custody records.</p></div>
           <div className="home-pillar-grid">
             <article className="home-pillar-card home-core-card">
-              <div className="home-pillar-index">01 / CORE PLATFORM</div><div className="home-pillar-symbol">◈</div>
-              <h3>AssetPass Core</h3><p className="home-pillar-lead">Know your assets. Manage every transition.</p>
-              <p>Establish a reliable view of organizational assets, their condition, custody and lifecycle history — supported by structured workflows and controlled access.</p>
-              <ul><li>Asset registration and digital passports</li><li>Custody and responsibility tracking</li><li>Inspections, maintenance and lifecycle records</li><li>Visibility, governance and auditability</li></ul>
+              <div className="home-pillar-index">01 / CORE ASSET MANAGEMENT</div><div className="home-pillar-symbol">◈</div>
+              <h3>AssetPass Core</h3><p className="home-pillar-lead">Understand your assets. Account for every transition.</p>
+              <p>AssetPass Core is designed to establish a reliable view of assets, their condition, custody and supported lifecycle history through structured workflows and controlled access.</p>
+              <ul><li>Structured asset records and digital identities</li><li>Custody and responsibility workflows</li><li>Inspection, maintenance and lifecycle activity</li><li>Visibility, governance and auditability</li></ul>
               <Link href="/platform" className="home-pillar-link">Explore asset management <ArrowIcon /></Link>
             </article>
             <article className="home-pillar-card home-market-card" id="marketplace">
-              <div className="home-pillar-index">02 / CONNECTED MARKETPLACE</div><div className="home-market-visual"><div className="home-market-orbit" /><div className="home-market-tile"><span>AP</span><b>ASSET</b><small>DISCOVERY</small></div><div className="home-market-node node-a">↗</div><div className="home-market-node node-b">⌕</div><div className="home-market-node node-c">◇</div></div>
-              <h3>AssetPass Marketplace</h3><p className="home-pillar-lead">Discover assets. Create connections.</p>
-              <p>A dedicated marketplace experience designed to connect organizations and people with asset-related opportunities through a more structured digital environment.</p>
-              <ul><li>Discover listed assets and opportunities</li><li>Connect interested parties</li><li>Explore asset availability and details</li><li>Keep marketplace activity distinct from custody records</li></ul>
+              <div className="home-pillar-index">02 / MARKETPLACE DISCOVERY</div><div className="home-market-visual"><div className="home-market-orbit" /><div className="home-market-tile"><span>AP</span><b>ASSET</b><small>DISCOVERY</small></div><div className="home-market-node node-a">↗</div><div className="home-market-node node-b">⌕</div><div className="home-market-node node-c">◇</div></div>
+              <h3>AssetPass Marketplace</h3><p className="home-pillar-lead">Explore assets. Connect with opportunity.</p>
+              <p>The Marketplace is designed to help organizations and people discover eligible asset-related opportunities through a structured public experience.</p>
+              <ul><li>Public discovery of eligible published listings</li><li>Clear listing information and categories</li><li>Connections between interested parties and listing owners</li><li>Marketplace activity kept distinct from custody records</li></ul>
               <Link href="/marketplace" className="home-pillar-link">Explore the marketplace <ArrowIcon /></Link>
             </article>
           </div>
-          <p className="home-market-note">Marketplace availability and transaction workflows depend on the capabilities released in the application. A listing by itself does not change asset ownership or custody.</p>
+          <p className="home-market-note">The current public Marketplace page uses illustrative examples; live listing search, listing details and transaction workflows depend on their respective services being connected and released. A listing by itself does not change asset ownership or custody.</p>
         </div>
       </section>
 
       <section className="home-section home-capabilities" id="core-capabilities">
         <div className="home-container">
-          <div className="home-section-heading"><div><small>ASSETPASS CORE</small><h2>A clearer view of the asset lifecycle.</h2></div><p>Move beyond disconnected spreadsheets and informal handovers with a consistent record of the asset and its operational history.</p></div>
+          <div className="home-section-heading"><div><small>ASSETPASS CORE</small><h2>A clearer view of the asset lifecycle.</h2></div><p>Core is designed to support a consistent record of each asset and its operational history, reducing reliance on disconnected spreadsheets and informal handovers.</p></div>
+          <p>The capabilities below describe the intended Core experience. Availability depends on the functionality released in the authenticated application.</p>
           <div className="home-capability-grid">{coreCapabilities.map((item) => <article className="home-capability" key={item.number}><div><span>{item.icon}</span><small>{item.number}</small></div><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div>
         </div>
       </section>
 
       <section className="home-section home-organizations" id="organizations">
         <div className="home-container home-org-layout">
-          <div className="home-org-visual"><div className="home-org-panel"><div className="home-org-panel-head"><span>ORGANIZATION OVERVIEW</span><i>● ACTIVE VIEW</i></div><div className="home-org-stat"><span>ASSET RECORD</span><b>Structured information</b><small>Identity · Category · Lifecycle</small></div><div className="home-org-lines"><i /><i /><i /></div><div className="home-org-footer"><span>Custody history</span><b>Traceable activity ↗</b></div></div><div className="home-org-shield"><BrandMark /></div></div>
-          <div className="home-org-copy"><small>DESIGNED FOR ORGANIZATIONS</small><h2>Bring asset accountability into everyday operations.</h2><p>Whether managing equipment, facilities or other organizational resources, teams need a shared understanding of what exists, where responsibility sits and what has changed.</p><ul><li>Establish consistent asset records</li><li>Support clear roles and responsibility</li><li>Retain a history of important transitions</li><li>Make asset information easier to oversee</li></ul><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started <ArrowIcon /></a></div>
+          <div className="home-org-visual"><div className="home-org-panel"><div className="home-org-panel-head"><span>ILLUSTRATIVE ORGANIZATION VIEW</span><i>CONCEPT PREVIEW</i></div><div className="home-org-stat"><span>ASSET RECORD</span><b>Structured information</b><small>Identity · Category · Lifecycle</small></div><div className="home-org-lines"><i /><i /><i /></div><div className="home-org-footer"><span>Custody history</span><b>Traceable activity ↗</b></div></div><div className="home-org-shield"><BrandMark /></div></div>
+          <div className="home-org-copy"><small>DESIGNED FOR ORGANIZATIONS</small><h2>Bring asset accountability into everyday operations.</h2><p>Whether managing equipment, facilities or other organizational resources, teams need a shared understanding of what exists, where responsibility sits and what has changed.</p><ul><li>Establish consistent asset records</li><li>Support clear roles and responsibility</li><li>Retain a history of supported transitions</li><li>Make asset information easier to oversee</li></ul><a href="https://assetpass-app.vercel.app/register" className="home-primary-button">Get started <ArrowIcon /></a></div>
         </div>
       </section>
 
       <section className="home-section home-workflow" id="how-it-works">
         <div className="home-container home-workflow-layout">
-          <div className="home-workflow-copy"><small>FROM PHYSICAL TO DIGITAL</small><h2>A connected identity for every asset.</h2><p>QR identification provides a convenient bridge between a physical asset and its digital passport. Access to restricted asset and custody information remains subject to authorization.</p><Link href="/scan" className="home-text-link">Try the QR scanner <ArrowIcon /></Link></div>
+          <div className="home-workflow-copy"><small>FROM PHYSICAL TO DIGITAL</small><h2>A connected identity for every asset.</h2><p>QR identification provides a convenient bridge between a physical asset and its digital passport. A public QR token is a lookup reference, not an authorization credential. Access to restricted asset and custody information remains subject to authorization.</p><Link href="/scan" className="home-text-link">Try the QR scanner <ArrowIcon /></Link></div>
           <div className="home-steps">{steps.map((step, index) => <div className="home-step" key={step.number}><div className="home-step-marker"><span>{step.number}</span>{index !== steps.length - 1 && <i />}</div><div><h3>{step.title}</h3><p>{step.copy}</p></div></div>)}</div>
         </div>
       </section>
